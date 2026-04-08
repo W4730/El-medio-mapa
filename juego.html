@@ -4,9 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>el medio mapa</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>El Medio Mapa (Voyage)</h1>
+    <container>
+        <div class="stats" id="stats">
+            <h3>Tripulación</h3>
+            <ul>
+            
+            </ul>
+        </div>
+        
+        <div class="sec1" id="Intro">
+            <h1>El Medio Mapa (Voyage)</h1>
+            <img src="https://i.pinimg.com/736x/46/67/04/466704a85185b6b9723da261cc4fb55f.jpg" alt="logo">
+            <p>
+                Hace siglos, el temido capitán Silver, le Silente escondió su tesoro en una isla que no aparece en ningún mapa.
+        
+                Se dice que:
+        
+                El tesoro esta maldito
+        
+                La isla es despiadada
+        
+                Nadie que haya encontrado el tesoro ha regresado cuerdo
+        
+                Tú eres capitan de tu barco, La Gran Agatha, con tu fiel tripulacion de 10 hombres .
+        
+                Despues de saquear un barco encontraste a un en una botella cerrada la mitad de un mapa el cual dice que le pertenece a Silver. 
+        
+                A lo largo de algunos dias te enteras de rumores de que si existe la otra mitad del mapa talvez dos personas lo tengan
+
+                <a href="">Capitan Kidd</a>
+
+                o
+
+                <a href="">Isabella Crow</a>
+            </p>
+
+            <a href="#1a">
+                <button onclick="bajarTripulantes(2)">Isabella Crow</button>
+            </a>
+
+            <a href="#1b">
+                <button>Capitan Kidd</button>
+            </a>
+        </div>
+        <div class="sec2" id="1a">
+            <img src="https://images.squarespace-cdn.com/content/v1/603fdb9fada6165d919a6543/8e08dbac-c79e-42bc-adc4-212fcd70c90c/Limithron-Tortuga-Free.jpg" alt="tortuga">
+            <p>
+                Llegas con tu tripulacion al puerto de mercado mas cercano.
+                Todos disfrutan de la tierra firme y poder disfrutar de otra compañia que la de la Gran Agartha
+                <br>
+                <strong>Debido a tantos placeres, dos de tus hombres se desvanecen en la fiesta y no se les vuelve a ver</strong>  
+                <br>         
+                Le comentas a Isabella sobre la aparicion de este mapa incompleto,
+                a lo que ella te comenta que solo ha escuchado rumores sobre este tesoro. 
+                Ella no tiene la segunda parte del mapa, pero le pide a uno de sus cartografos que lea la mitad que tu tienes. 
+                A lo largo de tu vida en alta-mar has aprendido que la confianza es un bien muy escazo por lo que recuerdas que tu tambien tienes un cartografo en el barco
+            </p>
+            <a href="#2a">
+                <button class="option1">Tu cartografo</button>
+            </a>
+            <a href="#3a">
+                <button class="option2">El cartografo de Isabella</button>
+            </a>
+        </div>
+        <div class="sec1" id="1b">
+            <img src="https://cdn.thecollector.com/wp-content/uploads/2025/07/legendary-pirate-captain-kidd.jpg" alt="Kidd">
+            <p>
+                El capitan te recibe con una feroz sonrisa y sientes que todo el ambiente cambia una vez le muestras tu mitad del mapa.
+                su tripulacion guarda un temor silencio pero sientes cada uno de sus ojos encima de ti, como cuervos hambrientos.
+                Kidd te comenta que el tiene la segunda parte del mapa pero no piensa dejar que nadie toque su parte del mapa,
+                sientes que el ambiente se tensa y que solo hay una manera de salir con vida 
+            </p>
+
+            <a href="#2b">
+                <button onclick="bajarTripulantes(3)">Pelear</button>
+            </a>
+
+            <a href="#3b">
+                <button class="option2">Dialogar</button>
+            </a>
+        </div>
+        <div class="sec2" id="2a">
+            <img src="https://i.pinimg.com/1200x/33/5a/00/335a009d584e26d22ab3ebc66e468a18.jpg" alt="Kidd">
+            <p>
+                Tu cartografo es un joven marinero lleno de emocion por nuevas aventuras pero sin mucha experiencia
+
+                Decides entregarle a el, el mapa y lo vez indagando atravez de varias noches su desesperacion por descubrir cual puede ser la isla del mapa incompleto
+
+                Despues de algunos dias de espera el logra apuntar a dos islas las cuales pueden ser el destino que toda la tripulacion esta esperando
+
+                Antes de dar la ultima parada el se da cuenta de un peculiar pico en la isla, y la unica isla registrada, asi es 
+                <br>
+                <strong>La isla de las manzanas!</strong>
+            </p>
+
+            <a href="#manzana">
+                <button>Isla de las manzanas</button>
+            </a>
+        </div>
+        <div class="sec1" id="2b">
+            <img src="https://i.pinimg.com/1200x/47/70/10/4770105f1e7161f53997ab32467a6dee.jpg" alt="Kidd">
+            <p>
+                Al pegar el grito tus hombre sacan sus espadas y empieza una pelea estrenduoza sobre el barco del capitan Kidd
+
+                tus hombres lealmente pelean a tu lado logrando superar en fuerza a la tripulacion de Kidd
+
+                Es una pelea larga e intrepida pero al final atrapas al capitan Kidd al borde de tu espada, al ver la rendicion de su capitan, el resto de la tripulacion no tardo en rendirse
+                <br>
+                <strong>En la pelea perdiste a 3 de tu tripulacion</strong>
+            </p>
+
+            <a href="#2b">
+                <button onclick="robarMapa()">Matar a Kidd</button>
+            </a>
+
+            <a href="#3b">
+                <button>Apricionar a Kidd</button>
+            </a>
+        </div>
+
+
+
+
+    </container>
+    <script src="script.js"></script>
 </body>
 </html>
