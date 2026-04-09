@@ -23,6 +23,7 @@ p a {
 
 a {
     text-decoration: none;
+    font-size: 0;
 }
 
 .stats {
@@ -65,10 +66,20 @@ button {
         color 0.3s ease;
 }
 
+
+
 button:hover {
     background-color: #402B18;
     color:antiquewhite;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #666;
+    transition: none;
 }
 
 .sec1, .sec2 {
