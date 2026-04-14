@@ -7,6 +7,9 @@ let Isabella = false;
 
 let derrotado = false;
 
+let intel = false;
+let fuerza = false;
+
 let mapa = {
     completo : false,
     sangre : false
@@ -46,6 +49,16 @@ function AceptarKidd() {
 
 function GanaraKidd() {
     derrotado = true;
+    actualizarBotones();
+}
+
+function Inteligencia() {
+    intel = true;
+    actualizarBotones();
+}
+
+function Fuerza() {
+    fuerza = true;
     actualizarBotones();
 }
 
@@ -107,11 +120,17 @@ function actualizarBotones() {
     // Verificar tripulación
     // Ejemplo: verificarTripulacion('miBoton', 5); // Deshabilita si tripulación < 5
     verificarTripulacion('btn3', 9); // Deshabilita robarMapa si tripulación < 5
+    verificarTripulacion('btn7', 4); // Deshabilita CompletarMapa si tripulación < 10
     // Verificar personajes
     // Ejemplo: verificarPersonaje('miBoton', Isabella); // Deshabilita si Isabella está activa
     verificarPersonaje('btn1', derrotado); // Deshabilita robarMapa si Kidd no está activo
     verificarPersonaje('btn4', Isabella); // Deshabilita CompletarMapa si Isabella no está activa
     verificarPersonaje('btn5', Kidd);
+    verificarPersonaje('btn6', Isabella);
+    verificarPersonaje('btn8', intel);
+    verificarPersonaje('btn9', fuerza);
+    verificarPersonaje('btn10', Isabella);
+    verificarPersonaje('btn11', Kidd);
     
     // Verificar mapa
     // Ejemplo: verificarMapa('miBoton', mapa, 'completo'); // Deshabilita si mapa.completo es true

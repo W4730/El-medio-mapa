@@ -1,123 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #1f1a14;
+    --bronze: #6f4225;
+    --bronze-deep: #4e2f1b;
+    --gold: #c7a162;
+    --gold-soft: #e3c98f;
+    --paper: #f4ead9;
+    --card-1: rgba(238, 221, 192, 0.86);
+    --card-2: rgba(227, 202, 166, 0.86);
+    --line: rgba(86, 56, 30, 0.2);
+    --shadow-soft: 0 10px 35px rgba(46, 28, 16, 0.16);
+    --shadow-strong: 0 16px 40px rgba(38, 21, 12, 0.22);
+}
+
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #BF9056;
-    color: rgb(0, 0, 0);
-    font-family:'Times New Roman', Times, serif;
-    font-size: large;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.08rem, 0.95rem + 0.45vw, 1.3rem);
+    line-height: 1.55;
     text-align: center;
+    background:
+        radial-gradient(circle at 16% 12%, rgba(255, 239, 196, 0.38), transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(110, 75, 42, 0.2), transparent 46%),
+        linear-gradient(165deg, #d4b181 0%, #b88854 40%, #9f6f41 100%);
+    background-attachment: fixed;
+}
+
+container {
+    display: block;
+    width: min(1100px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1rem 0 4rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+    color: var(--bronze-deep);
+    margin: 0.3rem 0 0.7rem;
+}
+
+h1 {
+    font-size: clamp(1.7rem, 1.4rem + 1.2vw, 2.6rem);
 }
 
 p {
-    margin: 20px auto;
-    line-height: 1.5;
-    max-width: 800px;
+    width: min(70ch, 92%);
+    margin: 1rem auto;
 }
+
 p a {
-    color: rgb(119, 0, 0);
-    text-decoration: dotted underline;
-    font-weight: bold;
+    color: #7a2f19;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+    font-weight: 700;
 }
 
 a {
     text-decoration: none;
-    font-size: 0;
+    color: inherit;
 }
 
 .stats {
     position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-    background-color: #bf90565b;
-    padding-bottom: 20px;
-    padding-top: 5px;
+    top: 10px;
+    z-index: 50;
+    margin: 0 auto 1.1rem;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(250, 239, 218, 0.68);
+    backdrop-filter: blur(10px) saturate(130%);
+    box-shadow: var(--shadow-soft);
+    padding: 0.5rem 1rem 1rem;
 }
 
 ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.9rem;
     padding: 0;
     margin: 0;
 }
 
-
 li {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 1.8rem;
     background-image: url(img/personaicon.png);
     background-repeat: no-repeat;
-    background-size: 25px;
+    background-position: left center;
+    background-size: 1.25rem;
     display: inline-block;
+    color: var(--bronze-deep);
 }
 
 button {
-    background-color: #733E1F;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 10px;
+    background: linear-gradient(155deg, #7c4c2b 0%, #60381f 100%);
+    color: #f8ecd6;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(227, 201, 143, 0.5);
+    border-radius: 999px;
+    padding: 0.72rem 1.2rem;
+    margin: 0.35rem;
     cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 
-        background-color 0.3s ease,
-        box-shadow 0.3s ease,
-        color 0.3s ease;
+    box-shadow: 0 7px 18px rgba(44, 25, 12, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
-
-
 button:hover {
-    background-color: #402B18;
-    color:antiquewhite;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(33, 18, 8, 0.32);
+    filter: brightness(1.08);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 button:disabled {
-    background-color: #999;
+    background: linear-gradient(155deg, #9f978a 0%, #7f776c 100%);
+    border-color: rgba(85, 76, 66, 0.45);
+    color: #e8dfd2;
     cursor: not-allowed;
     box-shadow: none;
-    color: #666;
-    transition: none;
+    filter: grayscale(0.25);
 }
 
-.sec1, .sec2 {
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 20px;
-    width: 90%;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.sec1,
+.sec2 {
+    position: relative;
+    width: min(96%, 980px);
+    margin: 1.15rem auto;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    padding: clamp(1rem, 1rem + 1vw, 1.8rem);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    animation: rise-in 0.7s ease both;
+}
+
+.sec1::before,
+.sec2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold-soft) 50%, var(--gold) 80%, transparent 100%);
 }
 
 .sec1 {
-    background-color: #A66D3C;
+    background: var(--card-1);
 }
 
 .sec2 {
-    background-color: #D9B384;
+    background: var(--card-2);
 }
 
-strong{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
+container > div:nth-of-type(2n) {
+    animation-delay: 0.08s;
+}
+
+strong {
+    color: #5f2816;
+    font-weight: 700;
 }
 
 img {
-    width: 30%;
+    width: min(420px, 88%);
     height: auto;
-    margin: 20px 0;
+    margin: 0.8rem 0 0.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(68, 43, 24, 0.24);
+    box-shadow: var(--shadow-strong);
+    object-fit: cover;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    container {
+        width: calc(100% - 0.8rem);
+    }
+
+    .stats {
+        top: 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .sec1,
+    .sec2 {
+        width: 100%;
+        margin: 0.7rem auto;
+    }
+
+    button {
+        width: min(100%, 320px);
+    }
 }
 
 @media screen and (max-width: 600px) {
-    img {
-        width: 90%;
-        height: auto;
+    p {
+        width: 95%;
     }
 
-    .sec1, .sec2 {
-        width: initial;
-        margin: 0;
+    img {
+        width: 100%;
     }
 }
